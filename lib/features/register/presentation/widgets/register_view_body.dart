@@ -1,5 +1,6 @@
 import 'package:complete_chat_app_tharwat/core/widgets/idenyify_section.dart';
 import 'package:complete_chat_app_tharwat/features/register/presentation/widgets/login_transportation.dart';
+import 'package:complete_chat_app_tharwat/features/register/presentation/widgets/register_bloc_listener.dart';
 import 'package:complete_chat_app_tharwat/features/register/presentation/widgets/register_section.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,9 @@ class RegisterViewBody extends StatelessWidget {
             const SizedBox(
               height: 75,
             ),
-            RegisterSection(),
+            RegisterBlocListener(
+              child: RegisterSection(),
+            ),
             const SizedBox(
               height: 10,
             ),

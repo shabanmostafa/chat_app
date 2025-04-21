@@ -15,7 +15,12 @@ class RegisterTransportation extends StatelessWidget {
         ),
         GestureDetector(
           onTap: () {
-            Navigator.pushNamed(context, RegisterView.id);
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const RegisterView(),
+              ),
+            );
           },
           child: const Text('Register',
               style: TextStyle(color: Colors.grey, fontSize: 15)),

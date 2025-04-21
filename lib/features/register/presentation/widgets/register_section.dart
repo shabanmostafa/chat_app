@@ -1,10 +1,11 @@
 import 'package:complete_chat_app_tharwat/core/widgets/custom_button.dart';
 import 'package:complete_chat_app_tharwat/core/widgets/custom_form_text_field.dart';
-import 'package:complete_chat_app_tharwat/features/register/presentation/widgets/register_validation.dart';
+import 'package:complete_chat_app_tharwat/features/register/manager/cubit/register_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class RegisterSection extends StatefulWidget {
-  RegisterSection({super.key});
+  const RegisterSection({super.key});
 
   @override
   State<RegisterSection> createState() => _RegisterSectionState();
@@ -13,7 +14,6 @@ class RegisterSection extends StatefulWidget {
 class _RegisterSectionState extends State<RegisterSection> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
-  // إضافة Controllers
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -24,10 +24,10 @@ class _RegisterSectionState extends State<RegisterSection> {
       key: formKey,
       child: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 12),
+          const Padding(
+            padding: EdgeInsets.only(left: 12),
             child: Row(
-              children: const [
+              children: [
                 Text(
                   'Register',
                   style: TextStyle(color: Colors.white, fontSize: 22),
@@ -36,37 +36,31 @@ class _RegisterSectionState extends State<RegisterSection> {
             ),
           ),
           const SizedBox(height: 10),
-
-          // Name Field
           CustomFormTextField(
             hintText: 'Name',
             controller: nameController,
           ),
           const SizedBox(height: 10),
-
-          // Email Field
           CustomFormTextField(
             hintText: 'Email',
             controller: emailController,
           ),
           const SizedBox(height: 15),
-
-          // Password Field
           CustomFormTextField(
             hintText: 'Password',
             controller: passwordController,
-            isPassword: true, // حقل كلمة مرور
+            isPassword: true,
           ),
           const SizedBox(height: 10),
-
-          // Register Button
           CustomButton(
             color: Colors.white,
             onTap: () {
               if (formKey.currentState!.validate()) {
-                createUser(
-                    context, emailController.text, passwordController.text);
-                Navigator.pop(context);
+                context.read<RegisterCubit>().createUser(
+                      email: emailController.text,
+                      password: passwordController.text,
+                      name: nameController.text,
+                    );
               }
             },
             text: 'Register',

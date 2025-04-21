@@ -18,7 +18,7 @@ class IdenyifySection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
             Text(
-              'shaban Meeting',
+              'Chat App',
               style: TextStyle(
                   fontSize: 22,
                   fontFamily: 'Pacifico',

@@ -1,8 +1,7 @@
-import 'package:complete_chat_app_tharwat/features/chat/presentation/views/chat_view.dart';
-import 'package:complete_chat_app_tharwat/features/meeting/presentation/views/meeting_info_view.dart';
+import 'package:complete_chat_app_tharwat/features/home/presentation/views/my_chat_list_view.dart';
 import 'package:complete_chat_app_tharwat/features/login/presentation/views/login_view.dart';
-import 'package:complete_chat_app_tharwat/features/register/presentation/views/register_view.dart';
 import 'package:complete_chat_app_tharwat/firebase_options.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -21,13 +20,19 @@ class ChatApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      routes: {
-        LoginView.id: (context) => LoginView(),
-        RegisterView.id: (context) => RegisterView(),
-        MeetingInfoView.id: (context) => MeetingInfoView(),
-        ChatView.id: (context) => ChatView(),
-      },
-      initialRoute: LoginView.id,
+      home: StreamBuilder(
+        stream: FirebaseAuth.instance.authStateChanges(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(child: CircularProgressIndicator());
+          } else if (snapshot.hasData) {
+            return MyChatListView(
+                currentUserId: FirebaseAuth.instance.currentUser!.uid);
+          } else {
+            return const LoginView();
+          }
+        },
+      ),
     );
   }
 }

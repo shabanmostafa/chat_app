@@ -1,0 +1,2 @@
+D:/courses/Flutter/projects_flutter/complete_chat_app_tharwat/android/app/.cxx/Debug/4v5z4r4s/x86/CMakeFiles/edit_cache.dir
+D:/courses/Flutter/projects_flutter/complete_chat_app_tharwat/android/app/.cxx/Debug/4v5z4r4s/x86/CMakeFiles/rebuild_cache.dir

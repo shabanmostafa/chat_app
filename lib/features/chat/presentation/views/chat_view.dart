@@ -2,13 +2,27 @@ import 'package:complete_chat_app_tharwat/features/chat/presentation/widgets/cha
 import 'package:flutter/material.dart';
 
 class ChatView extends StatelessWidget {
-  const ChatView({super.key});
+  final String chatId;
+  final String otherUserId;
+  final String otherUserName;
+
+  const ChatView({
+    super.key,
+    required this.chatId,
+    required this.otherUserId,
+    required this.otherUserName,
+  });
+
   static String id = 'chat_view';
+
   @override
   Widget build(BuildContext context) {
-    final String email = ModalRoute.of(context)!.settings.arguments as String;
     return Scaffold(
-      body: ChatViewBody(email: email),
+      body: ChatViewBody(
+        chatId: chatId,
+        otherUserId: otherUserId,
+        otherUserName: otherUserName,
+      ),
     );
   }
 }
