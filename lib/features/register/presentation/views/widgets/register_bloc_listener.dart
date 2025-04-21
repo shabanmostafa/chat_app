@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:complete_chat_app_tharwat/features/home/presentation/widgets/my_chat_list_view_body.dart';
-import 'package:complete_chat_app_tharwat/features/register/manager/cubit/register_cubit.dart';
-import 'package:complete_chat_app_tharwat/features/register/manager/cubit/register_states.dart';
+import 'package:complete_chat_app_tharwat/features/home/presentation/views/widgets/my_chat_list_view_body.dart';
+import 'package:complete_chat_app_tharwat/features/register/presentation/manager/cubit/register_cubit.dart';
+import 'package:complete_chat_app_tharwat/features/register/presentation/manager/cubit/register_states.dart';
 
 class RegisterBlocListener extends StatelessWidget {
   final Widget child;

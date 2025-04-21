@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:complete_chat_app_tharwat/core/widgets/custom_app_bar.dart';
-import 'package:complete_chat_app_tharwat/features/chat/presentation/widgets/chat_bubble.dart';
-import 'package:complete_chat_app_tharwat/features/chat/presentation/widgets/message_input_field.dart';
-import 'package:complete_chat_app_tharwat/features/chat/presentation/manager/chat_cubit.dart';
-import 'package:complete_chat_app_tharwat/features/chat/presentation/manager/chat_state.dart';
+import 'package:complete_chat_app_tharwat/features/chat/presentation/manager/cubit/chat_cubit.dart';
+import 'package:complete_chat_app_tharwat/features/chat/presentation/manager/cubit/chat_state.dart';
+import 'package:complete_chat_app_tharwat/features/chat/presentation/views/widgets/chat_bubble.dart';
+import 'package:complete_chat_app_tharwat/features/chat/presentation/views/widgets/message_input_field.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

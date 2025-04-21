@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:complete_chat_app_tharwat/core/widgets/custom_button.dart';
 import 'package:complete_chat_app_tharwat/core/widgets/custom_form_text_field.dart';
-import 'package:complete_chat_app_tharwat/features/login/manager/cubit/login_cubit.dart';
+import 'package:complete_chat_app_tharwat/features/login/presentation/manager/cubit/login_cubit.dart';
 
 class LoginSection extends StatefulWidget {
   const LoginSection({super.key});

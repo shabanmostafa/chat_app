@@ -1,6 +1,6 @@
 import 'package:complete_chat_app_tharwat/core/widgets/custom_button.dart';
 import 'package:complete_chat_app_tharwat/core/widgets/custom_form_text_field.dart';
-import 'package:complete_chat_app_tharwat/features/register/manager/cubit/register_cubit.dart';
+import 'package:complete_chat_app_tharwat/features/register/presentation/manager/cubit/register_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

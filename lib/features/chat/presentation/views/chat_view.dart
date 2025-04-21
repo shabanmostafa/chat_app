@@ -2,7 +2,7 @@ import 'package:complete_chat_app_tharwat/features/chat/presentation/manager/cub
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:complete_chat_app_tharwat/features/chat/presentation/widgets/chat_view_body.dart';
+import 'package:complete_chat_app_tharwat/features/chat/presentation/views/widgets/chat_view_body.dart';
 
 class ChatView extends StatelessWidget {
   final String chatId;

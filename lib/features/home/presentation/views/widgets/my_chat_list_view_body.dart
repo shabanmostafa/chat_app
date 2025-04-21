@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:complete_chat_app_tharwat/features/chat/presentation/views/chat_view.dart';
-import 'package:complete_chat_app_tharwat/features/home/manager/cubit/chat_list_cubit.dart';
-import 'package:complete_chat_app_tharwat/features/home/manager/cubit/chat_list_states.dart';
+import 'package:complete_chat_app_tharwat/features/home/presentation/manager/cubit/chat_list_cubit.dart';
+import 'package:complete_chat_app_tharwat/features/home/presentation/manager/cubit/chat_list_states.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'custom_search_bar.dart';

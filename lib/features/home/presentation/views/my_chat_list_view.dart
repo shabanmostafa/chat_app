@@ -1,4 +1,4 @@
-import 'package:complete_chat_app_tharwat/features/home/presentation/widgets/my_chat_list_view_body.dart';
+import 'package:complete_chat_app_tharwat/features/home/presentation/views/widgets/my_chat_list_view_body.dart';
 import 'package:flutter/material.dart';
 
 class MyChatListView extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:complete_chat_app_tharwat/features/register/manager/cubit/register_states.dart';
+import 'package:complete_chat_app_tharwat/features/register/presentation/manager/cubit/register_states.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class RegisterCubit extends Cubit<RegisterState> {

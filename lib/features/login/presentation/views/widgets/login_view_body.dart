@@ -1,7 +1,7 @@
 import 'package:complete_chat_app_tharwat/core/widgets/idenyify_section.dart';
-import 'package:complete_chat_app_tharwat/features/login/presentation/widgets/login_bloc_listener.dart';
-import 'package:complete_chat_app_tharwat/features/login/presentation/widgets/login_section.dart';
-import 'package:complete_chat_app_tharwat/features/login/presentation/widgets/register_transportation.dart';
+import 'package:complete_chat_app_tharwat/features/login/presentation/views/widgets/login_bloc_listener.dart';
+import 'package:complete_chat_app_tharwat/features/login/presentation/views/widgets/login_section.dart';
+import 'package:complete_chat_app_tharwat/features/login/presentation/views/widgets/register_transportation.dart';
 import 'package:flutter/material.dart';
 
 class LoginViewBody extends StatelessWidget {

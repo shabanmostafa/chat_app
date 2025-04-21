@@ -1,5 +1,5 @@
 import 'package:complete_chat_app_tharwat/core/widgets/const.dart';
-import 'package:complete_chat_app_tharwat/features/chat/presentation/widgets/message_content_section.dart';
+import 'package:complete_chat_app_tharwat/features/chat/presentation/views/widgets/message_content_section.dart';
 import 'package:flutter/material.dart';
 
 class ChatBubble extends StatelessWidget {

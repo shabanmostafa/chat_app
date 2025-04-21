@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:complete_chat_app_tharwat/features/home/manager/cubit/chat_list_states.dart';
+import 'package:complete_chat_app_tharwat/features/home/presentation/manager/cubit/chat_list_states.dart';
 
 class ChatListCubit extends Cubit<ChatListState> {
   final String currentUserId;

@@ -1,4 +1,4 @@
-import 'package:complete_chat_app_tharwat/features/login/manager/cubit/login_states.dart';
+import 'package:complete_chat_app_tharwat/features/login/presentation/manager/cubit/login_states.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
