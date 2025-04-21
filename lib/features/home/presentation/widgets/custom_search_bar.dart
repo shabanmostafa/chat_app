@@ -79,7 +79,6 @@ class _CustomSearchBarState extends State<CustomSearchBar> {
               if (otherUserId == widget.currentUserId) {
                 return const SizedBox.shrink();
               }
-
               return Material(
                 child: ListTile(
                     leading: const CircleAvatar(
