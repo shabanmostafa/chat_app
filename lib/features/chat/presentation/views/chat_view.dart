@@ -1,5 +1,8 @@
-import 'package:complete_chat_app_tharwat/features/chat/presentation/widgets/chat_view_body.dart';
+import 'package:complete_chat_app_tharwat/features/chat/presentation/manager/cubit/chat_cubit.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:complete_chat_app_tharwat/features/chat/presentation/widgets/chat_view_body.dart';
 
 class ChatView extends StatelessWidget {
   final String chatId;
@@ -17,8 +20,11 @@ class ChatView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: ChatViewBody(
+    final currentUserId = FirebaseAuth.instance.currentUser!.uid;
+
+    return BlocProvider(
+      create: (_) => ChatCubit(chatId: chatId, currentUserId: currentUserId),
+      child: ChatViewBody(
         chatId: chatId,
         otherUserId: otherUserId,
         otherUserName: otherUserName,
